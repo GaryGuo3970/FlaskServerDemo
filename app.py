@@ -1,6 +1,9 @@
 import json
+from datetime import datetime
 
 from flask import Flask
+
+from demo_basic import formatdatetime
 
 app = Flask(__name__)
 
@@ -14,12 +17,14 @@ def customer():
         {
             "no":"C001",
             "name":"Porsche",
-            "age":10
+            "age":10,
+            "createdt":formatdatetime(datetime.now())
         },
         {
             "no":"C002",
             "name":"Michelin",
-            "age":8
+            "age":8,
+            "createdt":formatdatetime(datetime.now())
         }
     ]
 
