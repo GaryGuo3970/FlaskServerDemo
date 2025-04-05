@@ -1,11 +1,23 @@
 import json
+import os
 from datetime import datetime
-
 from flask import Flask
+from basic_functions import formatdatetime
 
-from demo_basic import formatdatetime
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_PATH = os.path.join(BASE_DIR, "db")
 
 app = Flask(__name__)
+
+
+def booking():
+    pass
+
+def history():
+    pass
+
+def auth():
+    pass
 
 @app.route('/api/home')
 def home():
